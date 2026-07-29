@@ -25,10 +25,12 @@ get_mdeb_for_package <- function(overwrite = FALSE) {
       fn <- dataset_name
       assign(dataset_name, data)
       if (overwrite) {
+        message(paste0("Saving: ", dataset$title))
         save(
           list = dataset_name,
           file = here::here("data", paste0(fn, ".rda"))
         )
+        message("Saved!")
       }
       # Grab description from metadata (if available)
       fs_layer <- paste0(dataset$url, '?f=pjson') |>
