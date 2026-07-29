@@ -41,7 +41,7 @@ jobs:
 
       - name: Install packages
         run: |
-          install.packages(c("remotes","here","httr",jsonlite","dplyr","glue"))
+          install.packages(c("remotes","here","httr2","jsonlite","dplyr","glue"))
           remotes::install_github("andybeet/testnefscspatial")
         shell: Rscript {0}
 
