@@ -25,7 +25,7 @@ get_mdeb_for_package <- function(overwrite = FALSE) {
       fn <- dataset_name
       assign(dataset_name, data)
       if (overwrite) {
-        message(paste0("Saving: ", dataset$title))
+        message("Saving: ", dataset$title)
         save(
           list = dataset_name,
           file = here::here("data", paste0(fn, ".rda"))
