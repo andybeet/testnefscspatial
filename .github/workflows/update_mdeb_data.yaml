@@ -27,6 +27,9 @@ jobs:
       - name: set up pandoc
         uses: r-lib/actions/setup-pandoc@v2
 
+      - name: Install system dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+
       - name: Install command line packages
         run: |
           sudo apt update
